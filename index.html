@@ -3,11 +3,13 @@
 <html lang="en-us">
 
 <head>
+<link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+<link href='main.css'>
 <meta charset="utf-8">
-<title>Hello...</title>
+<title>Tianyi Zhao</title>
 <style type="text/css">
 #mainContent {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Cormorant Garamond';
 	font-size: xx-large;
 	font-weight: bold;
 	background-color: #E3F0FB;
@@ -43,20 +45,33 @@
 </head>
 
 <body>
-<div id="mainContent">
-<p id="helloText">?</p>
-<button id="clickButton" class="buttonStyle">click me</button>
-</div>
-<script> 
-var myButton = document.getElementById("clickButton");
-var myText = document.getElementById("helloText");
+	<div id="header" style="font-family:Cormorant Garamond">
+		<h1>Tianyi Zhao</h1>
+		<div id="menu">
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="about.html">About me</a>
+				</li>
+				<li>
+					<a href="portfolio.html">Portfolio</a>
+				</li>
+				<li>
+					<a href="about.html">Resume</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="description">
+		
+	</div>
+<p>
+	Programmer, game designer, music composer
+</p>
+<input type="button" name="sdf"/>
 
-myButton.addEventListener('click', doSomething, false)
-
-function doSomething() {
-	myText.textContent = "hello, world!!!!!!!!!!!!!";
-}
-</script>
 
 </body>
 </html>
