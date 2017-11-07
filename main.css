@@ -1,0 +1,91 @@
+body{
+	background-color: #f2f2f2;
+	color: black;
+	font-family: 'Cormorant Garamond';
+}
+.main-center{
+	margin: auto;
+	width: 1000px;
+}
+#header{
+	font-size: 100%;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	float: none;
+	height: 50px;
+	position: sticky;
+	top: 0;
+	z-index:100;
+	background: #f2f2f2;
+	border-bottom: solid;
+	border-left: solid;
+	border-right: solid;
+}
+#header-title{
+	font-family: 'Cormorant Garamond';
+	font-size: 40px;
+	position: relative;
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+#header-title:hover{
+    cursor: pointer;
+}
+#header-menu{
+	font-family: 'Cormorant Garamond';
+	font-size: 20px;
+	width: 60%;
+	height: 100%;
+	float: right;
+}
+#main{
+    width: 100%;
+}
+#main-description{
+    text-align: center;
+    margin-top: 300px;
+    padding: 100px;
+    font-family: 'Alex Brush';
+    font-size: 60px;
+    font-style: italic;
+}
+.menu{
+	float: center;
+	width: 80%;
+	
+	display: block;
+    list-style-type: disc;
+    margin-top: 18px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+}
+.menu-content{
+	color: black;
+	text-decoration: none;
+	display: block;
+	float: left;
+	width: 25%;
+}
+.menu-content:hover{
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 110%;
+}
+.menu-content-selected{
+	color: #ff6633;
+	text-decoration: none;
+	display: block;
+	float: left;
+	width: 25%;
+}
+.menu-content-selected:hover{
+	color: #ff6633;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 110%;
+}
