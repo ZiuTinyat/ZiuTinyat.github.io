@@ -1,9 +1,20 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
 body{
+	position: relative;
+	min-height: 100%;
+	box-sizing: border-box;
+	padding-bottom: 6rem;
+	
+	position: relative;
 	background-color: #f2f2f2;
 	color: black;
 	font-family: 'Cormorant Garamond';
 }
 .main-center{
+	position: relative;
 	margin: auto;
 	width: 1000px;
 }
@@ -23,7 +34,6 @@ body{
 	border-right: solid;
 }
 #header-title{
-	font-family: 'Cormorant Garamond';
 	font-size: 40px;
 	position: relative;
 	width: 40%;
@@ -34,33 +44,27 @@ body{
     cursor: pointer;
 }
 #header-menu{
-	font-family: 'Cormorant Garamond';
 	font-size: 20px;
 	width: 60%;
 	height: 100%;
 	float: right;
 }
 #main{
-    width: 100%;
+    
 }
 #main-description{
+	margin: auto;
+	margin-top: 300px;
     text-align: center;
-    margin-top: 300px;
-    padding: 100px;
     font-family: 'Alex Brush';
     font-size: 60px;
-    font-style: italic;
 }
 .menu{
-	float: center;
 	width: 80%;
-	
 	display: block;
     list-style-type: disc;
+    margin: auto;
     margin-top: 18px;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 0;
 }
 .menu-content{
@@ -71,8 +75,6 @@ body{
 	width: 25%;
 }
 .menu-content:hover{
-	color: black;
-	text-decoration: none;
 	cursor: pointer;
 	font-size: 110%;
 }
@@ -88,4 +90,96 @@ body{
 	text-decoration: none;
 	cursor: pointer;
 	font-size: 110%;
+}
+#footer{
+	position: absolute;
+	left: 0; 
+	right: 0; 
+	bottom: 0;
+	
+	height: 100px;
+	padding: 0;
+	text-align: center;
+	font-size: 32px;
+	background-color: #e6e6e6;
+}
+#footer-contact{
+	position: absolute;
+	left:0;
+	width: 40%;
+	padding: 10px;
+	text-align: right;
+	font-size: 32px
+}
+#footer-contacts{
+	position: absolute;
+	right:0;
+	width: 45%;
+	height: 50px;
+	padding: 0;
+	text-align: left;
+	font-size: 32px
+}
+#footer-disclaimer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 16px
+}
+.footer-contact{
+	padding: 15px;
+}
+.footer-contact:hover{
+	cursor: pointer;
+	width: 36px;
+	height: 36px;
+	padding: 13px;
+}
+.project{
+	border-style: dashed;
+	border-color: #ffffff;
+	border-width: 2px;
+	width: 476px;
+	height: 416px;
+	background-color: #ffffff;
+	margin: 10px;
+	box-sizing: content-box;
+	float: left;
+	
+}
+.project:hover{
+	border-color: #000000;
+}
+.project-image{
+	margin: auto;
+	margin-top: 10px;
+	width: 93%;
+}
+.project-content{
+	font-size: 100%;
+	margin: auto;
+	margin-bottom: 10px;
+	width: 90%;
+}
+.project-title{
+	font-size: 24px;
+	font-weight: bolder;
+	margin: auto;
+	margin-top: 10px;
+	width:90%;
+}
+.project-genre{
+	font-size: 18px;
+	font-weight: bolder;
+	text-align: right;
+	margin: auto;
+	margin-top: 10px;
+	width:90%;
+}
+.project-description{
+	font-size: 18px;
+	margin: auto;
+	margin-top: 10px;
+	width:90%;
 }
