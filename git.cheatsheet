@@ -2,3 +2,4 @@ git push
 git pull origin master
 git commit -m "hello"
 git add <filename>
+git add *
