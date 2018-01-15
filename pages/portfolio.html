@@ -1,4 +1,29 @@
-<?php echo file_get_contents("../framework_1.html"); ?>
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href='../main.css'>
+<script type="text/javascript" src="../main.js"></script>
+<meta charset="utf-8">
+<title>Tianyi Zhao</title>
+</head>
+<body onload="loadThisPage()">
+	<div id="header" class="main-center">
+		<div id="header-title" onclick="load(0)">Tianyi Zhao</div>
+		<div id="header-menu">
+			<ul class="menu">
+				<li id="menu-home" class="menu-content" onclick="loadPage('home')">Home</li>
+				<li id="menu-about" class="menu-content" onclick="loadPage('about');">About me</li>
+				<li id="menu-portfolio" class="menu-content" onclick="loadPage('portfolio')">Portfolio</li>
+				<li id="menu-resume" class="menu-content" onclick="loadResume()">Resume</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main" class="main-center">
+<!-- FRAMEWORK_1 -->
+	    
 <script>updateMenuTag("portfolio");</script>
 
 <h1>
@@ -180,4 +205,17 @@
     <div style="clear:both"></div>
 </div>
 
-<?php echo file_get_contents("../framework_2.html"); ?>
+<!--FRAMEWORK_2-->
+	</div>
+	<div id="footer" class="main-center">
+		<div id="footer-contact">Contact</div>
+		<div id="footer-contacts">
+			<img class="footer-contact" src="../files/icons/email.svg" height="32px" width="32px" onclick="window.open('mailto:tz1@andrew.cmu.edu', '_self')"/>
+			<img class="footer-contact" src="../files/icons/github.svg" height="32px" width="32px" onclick="window.open('https://github.com/ZiuTinyat', '_blank')"/>
+			<img class="footer-contact" src="../files/icons/facebook.svg" height="32px" width="32px" onclick="window.open('https://www.facebook.com/profile.php?id=100006528554451', '_blank')"/>
+		</div>
+		<div id="footer-disclaimer">Copyright © Tianyi Zhao 2017</div>
+	</div>
+
+</body>
+</html>
