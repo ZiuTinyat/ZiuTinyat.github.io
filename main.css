@@ -137,6 +137,13 @@ body{
 	height: 36px;
 	padding: 13px;
 }
+.footer-spaceholder{
+	box-sizing: content-box;
+	width: 1000px;
+	height: 100px;
+	margin: auto;
+	position: relative;
+}
 
 .project{
 	border-style: dashed;
