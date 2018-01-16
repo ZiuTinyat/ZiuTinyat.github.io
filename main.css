@@ -3,6 +3,7 @@ html {
   box-sizing: border-box;
 }
 body{
+	margin: 0;
 	position: relative;
 	min-height: 100%;
 	box-sizing: border-box;
@@ -123,10 +124,11 @@ body{
 }
 #footer-disclaimer{
 	position: absolute;
+	padding-bottom: 8px;
 	bottom: 0;
 	width: 100%;
 	text-align: center;
-	font-size: 16px
+	font-size: 16px;
 }
 .footer-contact{
 	padding: 15px;
