@@ -1,0 +1,76 @@
+<html><head>
+<title>My Handsome Head</title>
+	<style>
+		body{ background-color: grey; }
+	</style>
+	<!-- reference library: https://github.com/tkihira/webgl-miku-sample -->
+	<script type="text/javascript" src="gl-matrix.js"></script>
+	<script type="text/javascript" src="imgloader.js"></script>
+	<script type="text/javascript" src="objparser.js"></script>
+	<script type="text/javascript" src="myhead.js"></script>
+
+	<script id="shader-vs" type="x-shader/x-vertex">
+		precision mediump float;
+		// uniform: 
+		uniform mat4 modelviewMatrix; 
+		uniform mat4 projectionMatrix; 
+		uniform mat4 light;
+		// attribute: 
+		attribute vec3 vertex; 
+		attribute vec3 normal; 
+		attribute vec2 texcoord; 
+		// varying: 
+		varying vec3 e_normal; 
+		varying vec3 l_normal;
+		varying vec3 eye_v; 
+		varying vec2 texpos; 
+		
+		void main() {
+			gl_Position = projectionMatrix * modelviewMatrix * vec4(vertex, 1.0);
+			e_normal = vec3(modelviewMatrix * vec4(normal, 0.0));
+			l_normal=vec3(light * vec4(0, 0, 0, 1));
+			eye_v = (modelviewMatrix * vec4(vertex, 1.0)).xyz;
+			texpos = texcoord;
+		}
+	</script>
+	<script id="shader-fs" type="x-shader/x-fragment">
+		precision mediump float;
+		uniform vec3 kdcolor; 
+		uniform vec3 kscolor; 
+		uniform float nscolor; 
+		uniform float hasTexture; 
+		uniform sampler2D texture; 
+		varying vec3 e_normal; 
+		varying vec3 l_normal;
+		varying vec3 eye_v; 
+		varying vec2 texpos; 
+		
+		void main() {
+			vec3 n = normalize(e_normal); 
+			vec3 light_v = normalize(l_normal); 
+			float diffuse = max(dot(light_v, n), 0.0); 
+			float specular = pow(max(dot(-normalize(eye_v), reflect(-light_v, n)), 0.0), nscolor); 
+			float l = 0.5; 
+			if(hasTexture > 0.5) {
+				vec4 texcolor = texture2D(texture, texpos); 
+				gl_FragColor.rgb = (kdcolor * texcolor.rgb) * (diffuse + l) + kscolor * specular;
+				gl_FragColor.a = texcolor.a;
+			} else {
+				gl_FragColor = vec4(kdcolor * diffuse + kscolor * specular, 1.0) + vec4(kdcolor, 1.0) * vec4(l, l, l, 1.0);
+			}
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<canvas id="canvas" width="490" height="490">
+		Your browser does not support the HTML5 canvas element.
+	</canvas>
+	<h2>Rotation modes: <span id="state1" style="color:red">A -- light and head</span>, <span id="state2">S -- light only</span>, <span id="state3">D -- head only</span></h2>
+	<h2>Up/Down to zoom, Left/Right to yaw, Ctrl + Up/Down to roll. </h2>
+	<h2>Mouse dragging and wheeling are also supported</h2>
+	<h4>Reference: https://github.com/tkihira/webgl-miku-sample</h4>
+
+</body></html>
