@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href='../main.css'>
+<script type="text/javascript" src="../main.js"></script>
+<meta charset="utf-8">
+<title>Tianyi Zhao</title>
+</head>
+<body>
+	<div id="header" class="main-center">
+		<div id="header-title" onclick="loadPage('home')">Tianyi Zhao</div>
+		<div id="header-menu">
+			<ul class="menu">
+				<li id="menu-home" class="menu-content" onclick="loadPage('home')">Home</li>
+				<li id="menu-about" class="menu-content" onclick="loadPage('about');">About me</li>
+				<li id="menu-portfolio" class="menu-content" onclick="loadPage('portfolio')">Portfolio</li>
+				<li id="menu-resume" class="menu-content" onclick="loadResume()">Resume</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main" class="main-center">
+<!-- FRAMEWORK_1 -->
+
+<div class="page-title"> Alice's Adventure </div>
+<!--div class="video-wrapper">
+	<iframe class="video" src="https://www.youtube.com/embed/UWv2LWJ9d3Q" frameborder="0" allowfullscreen=""></iframe>
+</div-->
+<h1 class="page-subtitle"> Information </h1>
+<div class="page-content">
+	<table class="page-info-table">
+		<tr>
+			<td> Genre </td>
+			<td> Software development, game engine development </td>
+		</tr>
+		<tr>
+			<td> Platform </td>
+			<td> PC, macOS, web </td>
+		</tr>
+		<tr>
+			<td> Technology </td>
+			<td> Web (Node.js, Vue.js, Electron) </td>
+		</tr>
+		<tr>
+			<td> Duration </td>
+			<td> 4 months (Jan - Apr, 2018), ongoing now </td>
+		</tr>
+		<tr>
+			<td> Team size </td>
+			<td> 6 (3 programmers, 1 UI/UX, 1 designer, 1 producer)</td>
+		</tr>
+		<tr>
+			<td> My position </td>
+			<td> Technical director, front-end programmer </td>
+		</tr>
+		<tr>
+			<td> Website </td>
+			<td> <a href="http://www.etc.cmu.edu/blog/projects/alices-adventure/"> Alice's Adventure </a> </td>
+		</tr>
+	</table>
+</div>
+<h1 class="page-subtitle"> Description </h1>
+<div class="page-content">
+	<p>
+		"Alice's Adventure" is a branch project of "<a href="https://www.etc.cmu.edu/learn/alice/"> Alice </a>" held by ETC. 
+		This project aims to develop an adventure game creation tool that can be used to teach basic programming concepts as well as game design. 
+		Users are supposed to use drag-drop objects and block-based coding to create simple 2D adventure games with individualized mechanics. 
+	</p>
+	<p>
+		The application is written in HTML5 and Javascript, using <a href="https://electronjs.org/"> Electron </a> and Node.js to generate PC/macOS versions. 
+		The game engine is based on <a href="http://www.pixijs.com/"> Pixi.js </a> and will be encapsulated into adventure game specified "Alice Engine". 
+		<a href="https://developers.google.com/blockly/"> Blockly </a> is also customized and implanted into this project to provide block-based coding interface. 
+		The application will have functions of save/load projects, playtest in editor, compile project, etc. 
+	</p>
+</div>
+<h1 class="page-subtitle"> My contribution </h1>
+<div class="page-content">
+	<p>
+		As a technical director, my first job is to determine our platforms and tools. 
+		I concluded tons of researches we did about languages and tools including C++ (Cocos), C# (Unity), Java (BladeCoder) and JS (Pixi, Electron). 
+		It turned out that JS best serves our needs that it is higher efficiency than C++ and suitable for fast prototyping; it provides more flexible UI design than Unity; 
+		it is easy to produce cross-platform products; it has tons of free libraries online that we can take advantages of. 
+	</p>
+	<p>
+		After deciding our language, I learnt to use our major tools and did a gold spike application to connect Electron, Pixi and Blockly together. 
+	</p>
+	<p>
+		I also designed the system architecture. 
+	</p>
+	<p>
+		As a front-end programmer, I implemented all front-end logics including UI-data binding, digitalizing project data, saving/loading project files, running playtest and so on. 
+		I utilized require.js to modularize my code and encapsulated all classes into global AliceEditor object. 
+	</p>
+</div>
+
+<!-- FRAMEWORK_2 -->
+	</div>
+	<div class="footer-spaceholder"></div>
+	<div id="footer" class="main-center">
+		<div id="footer-contact">Contact</div>
+		<div id="footer-contacts">
+			<img class="footer-contact" src="../files/icons/email.svg" height="32px" width="32px" onclick="contactEmail()"/>
+			<img class="footer-contact" src="../files/icons/github.svg" height="32px" width="32px" onclick="contactGithub()"/>
+			<img class="footer-contact" src="../files/icons/facebook.svg" height="32px" width="32px" onclick="contactFacebook()"/>
+		</div>
+		<div id="footer-disclaimer">Copyright © Tianyi Zhao 2017</div>
+	</div>
+
+</body>
+</html>
