@@ -1,4 +1,5 @@
-git push
 git pull origin master
-git commit -m "hello"
+
 git add -A
+git commit -m "hello"
+git push
