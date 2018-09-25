@@ -63,14 +63,34 @@
 		Working with CMU Perceptual Computing Lab<!--a href="https://www.gineshidalgo.com/">Gines Hidalgo</a>, <a href="http://www.cs.cmu.edu/~aayushb/">Aayush Bansal</a>, 
 		<a href="http://www.cs.cmu.edu/~hanbyulj/">Hanbyul Joo</a>, and Prof. <a href="http://www.cs.cmu.edu/~yaser/">Yaser Sheikh</a-->, 
 		I developed an Unity demonstration for OpenPose on CVPR 2018. After that, I have been working on developing an OpenPose plugin for Unity Users. 
-		The GitHub repository can be accessed by <a href="https://github.com/ZiuTinyat/OpenPoseUnityDemo">this link</a>.
+		(<a href="https://github.com/ZiuTinyat/OpenPoseUnityDemo">Link to GitHub repository</a>)
 		
 	</p>
 </div>
-<h1 class="page-subtitle"> My contribution </h1>
+<h1 class="page-subtitle"> OpenPose Unity demo </h1>
 <div class="page-content">
 	<p>
-		TODO
+		This project utilizes OpenPose multi-camera 3D reconstruction function, and renders the output in Unity in real time. This demonstration was intended to be used in CVPR 2018. 
+		In Unity, I implemented UDP connection system, skeletal animating system, file parsing system and frame control system. 
+		And in C++, I implemented data formating and UDP sending functions. 
+	</p>
+	<p>
+		The real-time 3D reconstruction works as: 
+		<ol>
+			<li>OpenPose sends JSON formated output data through UDP.</li>
+			<li>Unity receives and stores the data.</li>
+			<li>The frame control system control the flow of data to ensure the smoothness.</li>
+			<li>The animating system converts the data and plays the animation</li>
+		</ol>
+	</p>
+	<p>
+		This demonstration project was successfully done within 1 month, with complete GUI system and full documentation. 
+	</p>
+</div>
+<h1 class="page-subtitle"> OpenPose Plulgin </h1>
+<div class="page-content">
+	<p>
+		This project aims to integrate OpenPose C++ plugin into Unity, and publish a free package in Unity Assets Store. 
 	</p>
 </div>
 
