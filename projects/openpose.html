@@ -14,7 +14,7 @@
 		<div id="header-title" onclick="loadPage('home')">Tianyi Zhao</div>
 		<div id="header-menu">
 			<ul class="menu">
-				<li id="menu-home" class="menu-content" onclick="loadPage('home')">Home</li>
+				<!--li id="menu-home" class="menu-content" onclick="loadPage('home')">Home</li-->
 				<li id="menu-about" class="menu-content" onclick="loadPage('about');">About me</li>
 				<li id="menu-portfolio" class="menu-content" onclick="loadPage('portfolio')">Portfolio</li>
 				<li id="menu-resume" class="menu-content" onclick="loadResume()">Resume</li>
@@ -32,16 +32,16 @@
 <div class="page-content">
 	<table class="page-info-table">
 		<tr>
-			<td> Genre </td>
-			<td> Unity plugin </td>
-		</tr>
-		<tr>
-			<td> Platform </td>
-			<td> Unity </td>
-		</tr>
-		<tr>
 			<td> Technology </td>
-			<td> Unity C#, C++, GitHub </td>
+			<td> Unity, C#, C++, GitHub </td>
+		</tr>
+		<tr>
+			<td> Highlight </td>
+			<td> Unity C++ unmanaged plugin, UDP networking </td>
+		</tr>
+		<tr>
+			<td> Team size </td>
+			<td> Solo (Unity part) </td>
 		</tr>
 		<tr>
 			<td> Duration </td>
@@ -71,8 +71,8 @@
 <div class="page-content">
 	<p>
 		This project utilizes OpenPose multi-camera 3D reconstruction function, and renders the output in Unity in real time. This demonstration was intended to be used in CVPR 2018. 
-		In Unity, I implemented UDP connection system, skeletal animating system, file parsing system and frame control system. 
-		And in C++, I implemented data formating and UDP sending functions. 
+		In Unity, I implemented skeletal animating system, file parsing system and frame control system. 
+		And in C++, I implemented data formating and UDP streaming functions. 
 	</p>
 	<p>
 		The real-time 3D reconstruction works as: 
@@ -84,11 +84,15 @@
 		</ol>
 	</p>
 	<p>
+		The UDP streaming system was implemented on both side (C++ library and Unity). In C++ side, 
 		This demonstration project was successfully done within 1 month, with complete GUI system and full documentation. 
 	</p>
 </div>
 <h1 class="page-subtitle"> OpenPose Plugin </h1>
 <div class="page-content">
+	<p>
+		This project aims to integrate OpenPose C++ plugin into Unity, and publish a free package in Unity Assets Store. 
+	</p>
 	<p>
 		This project aims to integrate OpenPose C++ plugin into Unity, and publish a free package in Unity Assets Store. 
 	</p>
@@ -103,6 +107,7 @@
 			<img class="footer-contact" src="../files/icons/email.svg" height="32px" width="32px" onclick="contactEmail()"/>
 			<img class="footer-contact" src="../files/icons/github.svg" height="32px" width="32px" onclick="contactGithub()"/>
 			<img class="footer-contact" src="../files/icons/facebook.svg" height="32px" width="32px" onclick="contactFacebook()"/>
+			<img class="footer-contact" src="../files/icons/linkedin.svg" height="32px" width="32px" onclick="contactLinkedin()"/>
 		</div>
 		<div id="footer-disclaimer">Copyright © Tianyi Zhao 2017</div>
 	</div>

@@ -14,7 +14,7 @@
 		<div id="header-title" onclick="loadPage('home')">Tianyi Zhao</div>
 		<div id="header-menu">
 			<ul class="menu">
-				<li id="menu-home" class="menu-content" onclick="loadPage('home')">Home</li>
+				<!--li id="menu-home" class="menu-content" onclick="loadPage('home')">Home</li-->
 				<li id="menu-about" class="menu-content" onclick="loadPage('about');">About me</li>
 				<li id="menu-portfolio" class="menu-content" onclick="loadPage('portfolio')">Portfolio</li>
 				<li id="menu-resume" class="menu-content" onclick="loadResume()">Resume</li>
@@ -26,7 +26,7 @@
 	    
 <script>updateMenuTag("portfolio");</script>
 
-<h1>
+<!--h1>
     Current projects
 </h1>
 <div class="projects">
@@ -46,12 +46,28 @@
             </div>
         </div>
     </div> <!--openpose-->
-    <div style="clear:both"></div>
-</div>
+    <!--div style="clear:both"></div>
+</div-->
 <h1>
     Programming
 </h1>
 <div class="projects">
+    <div class="project" onclick="openProj('openpose')">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/openpose/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                OpenPose (CMU Perceptual Lab)
+            </div>
+            <div class="project-genre">
+                C++ Unity plugin, UDP networking
+            </div>
+            <div class="project-description">
+                Unity plugin for Open-source C++ library OpenPose
+            </div>
+        </div>
+    </div> <!--openpose-->
     <div class="project" onclick="openProj('alice')">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/alice/index.jpg" />
@@ -100,7 +116,7 @@
             </div>
         </div>
     </div> <!--gnomes-->
-    <div class="project" onclick="window.open('../index.html')">
+    <!--div class="project" onclick="window.open('../index.html')">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/default.jpg" />
         </div>
@@ -116,7 +132,7 @@
             </div>
         </div>
     </div> <!--web-->
-    <div class="project" onclick="openProj('nighty')">
+    <!--div class="project" onclick="openProj('nighty')">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/nighty/index.jpg" />
         </div>
@@ -164,7 +180,7 @@
             </div>
         </div>
     </div> <!--chicken-->
-    <div class="project" onclick="openProj('mecha')">
+    <!--div class="project" onclick="openProj('mecha')">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/mecha/index.jpg" />
         </div>
@@ -212,7 +228,7 @@
             </div>
         </div>
     </div> <!--ghostnight-->
-    <div class="project" onclick="openProj('trainrouting')">
+    <!--div class="project" onclick="openProj('trainrouting')">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/trainrouting/index.jpg" />
         </div>
@@ -272,9 +288,25 @@
             </div>
         </div>
     </div> <!--the sea-->
+    <div class="project" onclick="openProj('gnomes')">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/gnomes/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Gnomes
+            </div>
+            <div class="project-genre">
+                BGM composition, sound design
+            </div>
+            <div class="project-description">
+                A 2v2 competitive fun game on PC with 2 screens and 4 Xbox controllers (ETC festival 2017)
+            </div>
+        </div>
+    </div> <!--gnomes-->
     <div style="clear:both"></div>
 </div>
-<h1>
+<!--h1>
     Other works
 </h1>
 <div class="projects">
@@ -294,8 +326,8 @@
             </div>
         </div>
     </div> <!--myhead-->
-    <div style="clear:both"></div>
-</div>
+    <!--div style="clear:both"></div>
+</div-->
 
 <!-- FRAMEWORK_2 -->
 	</div>

@@ -1,12 +1,12 @@
 console.log("main.js");
 function openProj(proj){
-    window.open("../projects/" + proj + ".html");
+    window.open("../projects/" + proj + ".html", "_self");
 }
 function loadPage(page){
     window.open("../pages/" + page + ".html", "_self");
 }
 function loadResume(){
-    window.open('../files/CV-Tianyi Zhao.pdf', '_blank')
+    window.open('../files/Tianyi-Zhao.pdf', '_self')
 }
 function updateMenuTag(page){
     document.getElementById("menu-" + page).setAttribute("class", "menu-content-selected");
@@ -20,4 +20,7 @@ function contactGithub(){
 }
 function contactFacebook(){
     window.open('https://www.facebook.com/profile.php?id=100006528554451', '_blank')
+}
+function contactLinkedin(){
+    window.open('https://www.linkedin.com/in/tianyi-zhao-018ba9154/', '_blank')
 }
