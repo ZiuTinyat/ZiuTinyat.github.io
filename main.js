@@ -1,6 +1,8 @@
-console.log("main.js");
 function openProj(proj){
     window.open("../projects/" + proj + ".html", "_self");
+}
+function openBlog(blog){
+    window.open("../blogs/" + blog + ".html", "_self");
 }
 function loadPage(page){
     window.open("../pages/" + page + ".html", "_self");
