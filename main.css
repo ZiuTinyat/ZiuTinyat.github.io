@@ -14,6 +14,11 @@ body{
 	color: #404040;
 	font-family: 'Cormorant Garamond';
 }
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
 .main-center{
 	position: relative;
 	margin: auto;
@@ -197,6 +202,50 @@ body{
 	width:90%;
 }
 
+.blog{
+	border-style: dashed;
+	border-color: #fbfbfb;
+	border-width: 2px;
+	width: 776px;
+	height: 176px;
+	background-color: #fbfbfb;
+	margin: auto;
+	margin-bottom: 20px;
+	box-sizing: content-box;
+	font-family: Merriweather;
+}
+.blog:hover{
+	border-color: #737373;
+	cursor: pointer;
+}
+
+.blog-content{
+	margin: auto;
+	width: 80%;
+}
+.blog-title{
+	font-size: 24px;
+	font-weight: bolder;
+	margin: auto;
+	margin-top: 20px;
+	width: 90%;
+}
+.blog-last-update{
+	font-size: 16px;
+	font-weight: bolder;
+	font-style: italic;
+	text-align: right;
+	margin: auto;
+	margin-top: 15px;
+	width:90%;
+}
+.blog-description{
+	font-size: 16px;
+	margin: auto;
+	margin-top: 20px;
+	width:90%;
+}
+
 .video-wrapper{
 	position: relative;
     margin: auto;
@@ -212,20 +261,35 @@ body{
 	font-size: 40px; 
 	font-weight: bold;
 	text-align: center;
-	padding-top: 80px;
+	margin-top: 80px;
 }
 .page-subtitle{
-	padding-top: 50px;
+	margin-top: 80px;
+	margin-bottom: 0px;
+}
+.page-note{
+	margin-top: 0px;
+	font-style: italic;
+	text-align: right;
 }
 .page-content{
 	width: 80%;
 	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
 	font-size: 18px;
 	font-family: Merriweather;
 	font-weight: lighter;
 }
+.page-image{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 .page-info-table{
 	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .page-info-table tr:nth-child(odd) {
 	background-color: #fbfbfb;
