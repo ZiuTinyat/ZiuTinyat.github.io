@@ -27,7 +27,45 @@
 
 <div class="page-title"> 4D Visualization and Exploration </div>
 
-<h2 class="page-subtitle"> Latest: First bloody dirty simple Hypercube! </h2>
+<h2 class="page-subtitle"> Latest: 4D Projection with a 4D camera </h2>
+<h3 class="page-note"> Feb 26, 2019 </h3>
+<div class="page-content">
+	<p>
+		This is a big topic! I found <a href="https://hollasch.github.io/ray4/Four-Space_Visualization_of_4D_Objects.html#s4.3">this material</a> very helpful in understanding 4D projection.
+		Here is my point of view. 
+	</p>
+	<p>
+		First of all, the projection between dimensionality is layer by layer, that means, we can project 4D to 3D first, then 3D to 2D. 
+		
+	</p>
+</div>
+
+<h2 class="page-subtitle"> Math in 4D and rotation matrix </h2>
+<h3 class="page-note"> Feb 12, 2019 </h3>
+<div class="page-content">
+	<p>
+		Here I summarize some math used in 4D space. 
+	</p>
+	<p>
+		Foundamentally, a 4D position is in 4 DoF(Degree of Freedom, same as below), and a rotation has 6 DoF. 
+		An effective explanation would be: In 3D, a rotation has 3 DoF aligning with each axis, which could also be considered as every 2 axis (x, y, z)->(yz, zx, xy). 
+		Same can be found in 2D: 1 axis (xy) and in 1D: no rotation. 
+		So, a 4D transform consists of a position (x, y, z, w) and a rotation (yz, zx, xy, xw, yw, zw). 
+	</p>
+	<p>
+		Similar to 3D rotation, a rotation matrix in 4D should be 4x4. Here I simply multiply all matrices for all axis in a certain order. 
+		This should be replaced by Rotor4D later, which can be considered as the equivalence of Quaternion in 3D. 
+	</p>
+	<p>
+		There are also things that not quite the same with 3D, such like cross product. 
+		There are no cross product between two vectors in 4D, because we cannot find one single direction that is perpendicular to the given 2 vectors. 
+		That is because the number of co-perpendicular axis is now 4, so we need 3 vectors to calculate their cross product. 
+		We can also use matrix determinant to conduct the 4D cross product: 
+	</p>
+	<img class="page-image" src="../files/4d/equ.jpg">
+</div>
+
+<h2 class="page-subtitle"> First bloody dirty simple Hypercube! </h2>
 <h3 class="page-note"> Jan 29, 2019 </h3>
 <div class="page-content">
 	<p>
