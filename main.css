@@ -221,7 +221,7 @@ a:-webkit-any-link {
 
 .blog-content{
 	margin: auto;
-	width: 80%;
+	width: 90%;
 }
 .blog-title{
 	font-size: 24px;
@@ -273,7 +273,7 @@ a:-webkit-any-link {
 	text-align: right;
 }
 .page-content{
-	width: 80%;
+	width: 90%;
 	margin: auto;
 	margin-top: 20px;
 	margin-bottom: 50px;
@@ -301,6 +301,24 @@ a:-webkit-any-link {
 	padding: 8px;
 }
 .page-info-table td:first-child{
+	font-weight: normal;
+	width: 25%;
+}
+.page-table{
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.page-table tr:nth-child(odd) {
+	background-color: #fbfbfb;
+}
+.page-table tr:nth-child(even) {
+	background-color: #f6f6f6;
+}
+.page-table td{
+	padding: 8px;
+}
+.page-table td:first-child{
 	font-weight: normal;
 	width: 25%;
 }
@@ -341,4 +359,23 @@ a:-webkit-any-link {
 }
 .about-info #photo{
 	width: 240px;
+}
+
+block{
+	margin: auto;
+	width: 100%;
+    background-color: #fff;
+    display: block;
+    overflow: scroll;
+}
+
+code{
+	font-family: Monaco, monospace;
+    font-size: inherit;
+    display: block;
+    padding-left: 10px;
+    background-color: #fff;
+    word-break: normal;
+    
+    overflow: visible;
 }
