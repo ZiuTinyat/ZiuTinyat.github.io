@@ -15,7 +15,7 @@ function updateMenuTag(page){
 }
 
 function contactEmail(){
-    window.open('mailto:tz1@andrew.cmu.edu', '_self')
+    window.open('mailto:ziutinyat@gmail.com', '_self')
 }
 function contactGithub(){
     window.open('https://github.com/ZiuTinyat', '_blank')
@@ -25,4 +25,9 @@ function contactFacebook(){
 }
 function contactLinkedin(){
     window.open('https://www.linkedin.com/in/tianyi-zhao-018ba9154/', '_blank')
+}
+
+function filterClassType(class, type){
+	document.getElementsByClassName(class);
+	
 }
