@@ -27,65 +27,97 @@
 	    
 <script>updateMenuTag("portfolio");</script>
 
-<!--h1>
-    Current projects
-</h1>
+<div class="filters" id="projects-filter">
+    <div class="filter" onclick="projectsFilter.applyFilterElement(this)" name="featured">Featured</div>
+    <div class="filter" onclick="projectsFilter.applyFilterElement(this)" name="programming">Programming</div>
+    <div class="filter" onclick="projectsFilter.applyFilterElement(this)" name="game-dev">Game Dev</div>
+    <div class="filter" onclick="projectsFilter.applyFilterElement(this)" name="game-design">Game Design</div>
+    <div class="filter" onclick="projectsFilter.applyFilterElement(this)" name="music">Music Composition</div>
+    <div class="filter" onclick="projectsFilter.applyFilterElement(this)" name="">All</div>
+</div>
+
 <div class="projects">
-    <div class="project" onclick="openProj('openpose')">
+    <div class="project" onclick="openProj('openpose')" filter="featured programming">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/openpose/index.jpg" />
         </div>
         <div class="project-content">
             <div class="project-title">
-                OpenPose (CMU Perceptual Lab)
+                OpenPose
             </div>
             <div class="project-genre">
-                C++ Unity plugin, UDP networking
+                C++ lib, Unity plugin, UDP transporting
             </div>
             <div class="project-description">
-                Unity plugin for Open-source C++ library OpenPose
+                Unity plugin for open-source C++ library OpenPose, using CV for body parts tracking and mocap
             </div>
         </div>
     </div> <!--openpose-->
-    <!--div style="clear:both"></div>
-</div-->
-<h1>
-    Programming
-</h1>
-<div class="projects">
-    <div class="project" onclick="openProj('openpose')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/openpose/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                OpenPose (Current)
-            </div>
-            <div class="project-genre">
-                C++ Unity plugin, UDP networking
-            </div>
-            <div class="project-description">
-                Unity plugin for Open-source C++ library OpenPose
-            </div>
-        </div>
-    </div> <!--openpose-->
-    <!--div class="project" onclick="openProj('simtopia')">
+    <div class="project" onclick="openBlog('4d')" filter="featured programming game-dev">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/default.jpg" />
         </div>
         <div class="project-content">
             <div class="project-title">
-                Simtopia (Current)
+                4D Engine
             </div>
             <div class="project-genre">
-                Unity C#, VR (VIVE)
+                4D Math, VR, Unity
             </div>
             <div class="project-description">
-                A first-person exploration and free building experience
+                VR demo to explore 4D world, visualization of 4D meshes, rotation, projection
             </div>
         </div>
-    </div--> <!--simtopia-->
-    <div class="project" onclick="openProj('alice')">
+    </div> <!--4d-->
+    <div class="project" onclick="openBlog('tech_anim')" filter="featured programming">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/default.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Technical Animation
+            </div>
+            <div class="project-genre">
+                Physics Simulation
+            </div>
+            <div class="project-description">
+                A set of projects about cloth simulation, fluid simulation, skeletal animation and IK
+            </div>
+        </div>
+    </div> <!--tech_anim-->
+    <div class="project" onclick="openBlog('computer_graphics')" filter="featured programming">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/default.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Computer Graphics
+            </div>
+            <div class="project-genre">
+                Rendering
+            </div>
+            <div class="project-description">
+                A set of projects about ray-tracing, BRDF and mesh editing
+            </div>
+        </div>
+    </div> <!--computer_graphics-->
+    <div class="project" onclick="openProj('simtopia')" filter="game-dev">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/default.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Simtopia
+            </div>
+            <div class="project-genre">
+                Unity C#, VR
+            </div>
+            <div class="project-description">
+                A building and simulating VR game experience
+            </div>
+        </div>
+    </div> <!--simtopia-->
+    <div class="project" onclick="openProj('alice')" filter="featured programming">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/alice/index.jpg" />
         </div>
@@ -94,14 +126,14 @@
                 Alice's Adventure
             </div>
             <div class="project-genre">
-                Front-end, Electron, Vue.js, Pixi.js
+                Software Development, Electron, Vue.js, Pixi.js
             </div>
             <div class="project-description">
-                An adventure game creating application to teach programming concepts
+                An adventure game creating application to teach programming concepts and game design
             </div>
         </div>
     </div> <!--alice-->
-    <div class="project" onclick="openProj('zithersword')">
+    <div class="project" onclick="openProj('zithersword')" filter="game-dev">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/zithersword/index.jpg" />
         </div>
@@ -110,164 +142,14 @@
                 Zither Sword
             </div>
             <div class="project-genre">
-                C++ 3D animating and rendering, OGRE engine
+                Low-level 3D animating and rendering, OGRE engine, C++
             </div>
             <div class="project-description">
-                An ancient Chinese style rhythm action game on C++ and OGRE engine
+                A Wuxia style rhythm action game focused on rendering and animating pipeline
             </div>
         </div>
     </div> <!--zithersword-->
-    <div class="project" onclick="openProj('gnomes')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/gnomes/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                Gnomes
-            </div>
-            <div class="project-genre">
-                Unity C#, PC
-            </div>
-            <div class="project-description">
-                A 2v2 competitive fun game on PC with 2 screens and 4 Xbox controllers (ETC festival 2017)
-            </div>
-        </div>
-    </div> <!--gnomes-->
-    <!--div class="project" onclick="window.open('../index.html')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/default.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                Personal website
-            </div>
-            <div class="project-genre">
-                Full-stack web development
-            </div>
-            <div class="project-description">
-                This personal website, from design and coding
-            </div>
-        </div>
-    </div--> <!--web-->
-    <!--div class="project" onclick="openProj('nighty')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/nighty/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                Nighty Night
-            </div>
-            <div class="project-genre">
-                Unity C#, PC
-            </div>
-            <div class="project-description">
-                A horror PC game about a little girl (Asylum Jam 2017)
-            </div>
-        </div>
-    </div--> <!--nighty-->
-    <div class="project" onclick="openProj('firefighter')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/firefighter/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                Hell's Kitchen
-            </div>
-            <div class="project-genre">
-                Unity C#, VR (Oculus)
-            </div>
-            <div class="project-description">
-                A interactive storytelling game about the first fire experience of a firefighter
-            </div>
-        </div>
-    </div> <!--firefighter-->
-    <div class="project" onclick="openProj('chicken')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/chicken/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                Angry Chicken
-            </div>
-            <div class="project-genre">
-                Unity C#, VR (HTC Vive)
-            </div>
-            <div class="project-description">
-                A destructing and smashing game targeted at naive guests (ETC festival 2017)
-            </div>
-        </div>
-    </div> <!--chicken-->
-    <!--div class="project" onclick="openProj('mecha')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/mecha/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                Mecha Warrior
-            </div>
-            <div class="project-genre">
-                Unity C#, Makey Makey, Woodworking
-            </div>
-            <div class="project-description">
-                A 2-player cooperative game about controling a gient robot to save the city
-            </div>
-        </div>
-    </div> <!--mecha-->
-    <div class="project" onclick="openProj('guardian')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/guardian/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                The Guardian
-            </div>
-            <div class="project-genre">
-                Unity C#, AR (MS HoloLens), level design
-            </div>
-            <div class="project-description">
-                A level-based action puzzle game about helping a spirit get out of the hell
-            </div>
-        </div>
-    </div> <!--guardian-->
-    <div class="project" onclick="openProj('ghostnight')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/ghostnight/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                Ghost Night
-            </div>
-            <div class="project-genre">
-                Web game, node.js, server-client networking
-            </div>
-            <div class="project-description">
-                A Japanese style Tower Defence game
-            </div>
-        </div>
-    </div> <!--ghostnight-->
-    <!--div class="project" onclick="openProj('trainrouting')">
-        <div class="project-image" >
-            <img width="100%" height="100%" src="../files/trainrouting/index.jpg" />
-        </div>
-        <div class="project-content">
-            <div class="project-title">
-                Train Routing
-            </div>
-            <div class="project-genre">
-                C++, Winforms
-            </div>
-            <div class="project-description">
-                My first game project, a Geometry style casual game
-            </div>
-        </div>
-    </div> <!--trainrouting-->
-    <div style="clear:both"></div>
-</div>
-<h1>
-    Game design
-</h1>
-<div class="projects">
-    <div class="project" onclick="openProj('ripple_blossom')">
+    <div class="project" onclick="openProj('ripple_blossom')" filter="featured game-design">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/ripple/index.jpg" />
         </div>
@@ -276,20 +158,110 @@
                 Ripple Blossom
             </div>
             <div class="project-genre">
-                Level design, puzzle design
+                Indie game, Level design
             </div>
             <div class="project-description">
-                A hard-core mobile puzzle game with traditional Chinese art style
+                A hard-core puzzle game about geometry, has won the Best Theme Integration Award in GGJ 2017
             </div>
         </div>
     </div> <!--ripple-->
-    <div style="clear:both"></div>
-</div>
-<h1>
-    Music composition and sound design
-</h1>
-<div class="projects">
-    <div class="project" onclick="window.open('http://www.yidizhu.com/articles/the-sea.html')">
+    <div class="project" onclick="openProj('gnomes')" filter="featured game-dev music">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/gnomes/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Gnomes' Crystals
+            </div>
+            <div class="project-genre">
+                Original Music, Game Prototype, Unity, PC
+            </div>
+            <div class="project-description">
+                A 2v2 competitive party game, enjoy the fantastic music! :) (ETC festival 2017)
+            </div>
+        </div>
+    </div> <!--gnomes-->
+    <div class="project" onclick="window.open('../index.html')" filter="programming">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/default.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Personal website
+            </div>
+            <div class="project-genre">
+                Static website, H5, JavaScript, CSS
+            </div>
+            <div class="project-description">
+                Exactly this personal website that you are looking at, purely code.
+            </div>
+        </div>
+    </div> <!--web-->
+    <div class="project" onclick="openProj('nighty')" filter="game-dev">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/nighty/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Nighty Night
+            </div>
+            <div class="project-genre">
+                Game Jam, Unity, PC
+            </div>
+            <div class="project-description">
+                A story-telling horror game about a little girl looking for her mom (Asylum Jam 2017)
+            </div>
+        </div>
+    </div> <!--nighty-->
+    <div class="project" onclick="openProj('firefighter')" filter="game-dev">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/firefighter/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Hell's Kitchen
+            </div>
+            <div class="project-genre">
+                Prototyping, Unity, VR (Oculus)
+            </div>
+            <div class="project-description">
+                An interactive story-telling game about a junior firefighter (Salute! o7)
+            </div>
+        </div>
+    </div> <!--firefighter-->
+    <div class="project" onclick="openProj('chicken')" filter="game-dev">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/chicken/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Angry Chicken
+            </div>
+            <div class="project-genre">
+                Prototyping, Unity, VR (HTC Vive)
+            </div>
+            <div class="project-description">
+                A smashing and stress relieving game for naive guests (ETC festival 2017)
+            </div>
+        </div>
+    </div> <!--chicken-->
+    <div class="project" onclick="openProj('mecha')" filter="game-dev">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/mecha/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Mecha Warrior
+            </div>
+            <div class="project-genre">
+                Prototyping, Unity, Makey Makey, Woodshop
+            </div>
+            <div class="project-description">
+                A 2-player colaborative game to control a robot defender to save the city
+            </div>
+        </div>
+    </div> <!--mecha-->
+    <div class="project" onclick="window.open('http://www.yidizhu.com/articles/the-sea.html')" filter="music">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/sea/index.jpg" />
         </div>
@@ -298,36 +270,62 @@
                 The Sea
             </div>
             <div class="project-genre">
-                BGM composition
+                Music prototyping
             </div>
             <div class="project-description">
-                Invited by Yidi Zhu, I wrote the BGM for his mini game. 
+                An emotional interactive experience by Yidi Zhu
             </div>
         </div>
     </div> <!--the sea-->
-    <div class="project" onclick="openProj('gnomes')">
+    <div class="project" onclick="openProj('guardian')" filter="game-dev music">
         <div class="project-image" >
-            <img width="100%" height="100%" src="../files/gnomes/index.jpg" />
+            <img width="100%" height="100%" src="../files/guardian/index.jpg" />
         </div>
         <div class="project-content">
             <div class="project-title">
-                Gnomes
+                The Guardian
             </div>
             <div class="project-genre">
-                BGM composition, sound design
+                 Prototyping, Unity, AR (HoloLens), level design
             </div>
             <div class="project-description">
-                A 2v2 competitive fun game on PC with 2 screens and 4 Xbox controllers (ETC festival 2017)
+                A level-based action puzzle game about helping a spirit get out of the hell
             </div>
         </div>
-    </div> <!--gnomes-->
-    <div style="clear:both"></div>
-</div>
-<!--h1>
-    Other works
-</h1>
-<div class="projects">
-    <div class="project" onclick="openProj('myhead')">
+    </div> <!--guardian-->
+    <div class="project" onclick="openProj('ghostnight')" filter="game-dev">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/ghostnight/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Ghost Night
+            </div>
+            <div class="project-genre">
+                H5 game, node.js, online match-making feature
+            </div>
+            <div class="project-description">
+                A Japanese style Tower Defence and Anti Tower Defence game
+            </div>
+        </div>
+    </div> <!--ghostnight-->
+    <div class="project" onclick="openProj('trainrouting')" filter="game-dev">
+        <div class="project-image" >
+            <img width="100%" height="100%" src="../files/trainrouting/index.jpg" />
+        </div>
+        <div class="project-content">
+            <div class="project-title">
+                Train Routing
+            </div>
+            <div class="project-genre">
+                C++, Winform
+            </div>
+            <div class="project-description">
+                My first programming project, a Geometric and minimalist style casual game
+            </div>
+        </div>
+    </div> <!--trainrouting-->
+    <div class="project" onclick="openProj('myhead')" filter="">
         <div class="project-image" >
             <img width="100%" height="100%" src="../files/myhead/index.jpg" />
         </div>
@@ -339,12 +337,17 @@
                 Maya, WebGL
             </div>
             <div class="project-description">
-                My head I modeled in Maya and rendered in WebGL
+                I modeled my head and rendered it in WebGL! 
             </div>
         </div>
     </div> <!--myhead-->
-    <!--div style="clear:both"></div>
-</div-->
+    <div style="clear:both"></div>
+</div>
+
+<script>
+    var projectsFilter = new FilterGroup(document.getElementById("projects-filter"), "project");
+    projectsFilter.applyFilterName("featured");
+</script>
 
 <!-- FRAMEWORK_2 -->
 	</div>
@@ -356,7 +359,7 @@
 			<img class="footer-contact" src="../files/icons/github.svg" height="32px" width="32px" onclick="contactGithub()"/>
 			<img class="footer-contact" src="../files/icons/facebook.svg" height="32px" width="32px" onclick="contactFacebook()"/>
 		</div>
-		<div id="footer-disclaimer">Copyright © Tianyi Zhao 2019</div>
+		<div id="footer-disclaimer">Copyright © Tianyi Zhao 2021</div>
 	</div>
 
 </body>

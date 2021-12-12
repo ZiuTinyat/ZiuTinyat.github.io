@@ -152,6 +152,35 @@ a:-webkit-any-link {
 	position: relative;
 }
 
+.filters{
+	margin-top: 50px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 16px;
+	font-family: Merriweather;
+}
+.filter{
+	margin: 10px;
+	border-style: solid;
+	border-color: #fbfbfb;
+	border-width: 2px;
+	padding: 6px;
+	background-color: #fbfbfb;
+	display: inline-block;
+}
+.filter:hover{
+	border-style: dotted;
+	border-color: #737373;
+	cursor: pointer;
+}
+.filter-selected{
+	border-color: #737373;
+	font-size: 120%;
+}
+.projects{
+
+}
 .project{
 	border-style: dashed;
 	border-color: #fbfbfb;
@@ -160,7 +189,6 @@ a:-webkit-any-link {
 	height: 416px;
 	background-color: #fbfbfb;
 	margin: 10px;
-	box-sizing: content-box;
 	float: left;
 	font-family: Merriweather;
 }
