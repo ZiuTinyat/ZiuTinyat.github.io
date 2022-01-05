@@ -224,10 +224,12 @@ a:-webkit-any-link {
 	width:90%;
 }
 .project-description{
-	font-size: 14px;
+	font-size: 16px;
 	margin: auto;
 	margin-top: 10px;
-	width:90%;
+	width: 90%;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.2px;
 }
 
 .blog{
@@ -306,8 +308,9 @@ a:-webkit-any-link {
 	margin-top: 20px;
 	margin-bottom: 50px;
 	font-size: 18px;
-	font-family: Merriweather;
-	font-weight: lighter;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.5px;
+	line-height: 25px;
 }
 .page-image{
 	display: block;
