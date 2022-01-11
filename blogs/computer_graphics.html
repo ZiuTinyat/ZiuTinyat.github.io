@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<link href='https://fonts.googleapis.com/css?family=Cormorant Garamond' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href='../main.css'>
+<script type="text/javascript" src="../main.js"></script>
+<meta charset="utf-8">
+<title>Tianyi Zhao</title>
+</head>
+<body>
+	<div id="header" class="main-center">
+		<div id="header-title" onclick="loadPage('home')">Tianyi Zhao</div>
+		<div id="header-menu">
+			<ul class="menu">
+				<!--li id="menu-home" class="menu-content" onclick="loadPage('home')">Home</li-->
+				<li id="menu-about" class="menu-content" onclick="loadPage('about');">About me</li>
+				<li id="menu-portfolio" class="menu-content" onclick="loadPage('portfolio')">Portfolio</li>
+				<li id="menu-blog" class="menu-content" onclick="loadPage('blog')">Blog</li>
+				<li id="menu-resume" class="menu-content" onclick="loadResume()">Resume</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main" class="main-center">
+<!-- FRAMEWORK_1 -->
+
+<div class="page-title"> Computer Graphics Course Blog </div>
+
+<h2 class="page-subtitle"> Rendered pictures </h2>
+<h3 class="page-note"> Mar 4, 2018 </h3>
+<div class="page-content">
+	<p>
+		<img class="page-image" style="width:60%" src="../files/cg/materials.jpg">
+		<img class="page-image" style="width:60%" src="../files/cg/focus.jpg">
+		<img class="page-image" style="width:60%" src="../files/cg/env_lighting.jpg">
+	</p>
+</div>
+
+<!-- FRAMEWORK_2 -->
+	</div>
+	<div class="footer-spaceholder"></div>
+	<div id="footer" class="main-center">
+		<div id="footer-contact">Contact</div>
+		<div id="footer-contacts">
+			<img class="footer-contact" src="../files/icons/email.svg" height="32px" width="32px" onclick="contactEmail()"/>
+			<img class="footer-contact" src="../files/icons/github.svg" height="32px" width="32px" onclick="contactGithub()"/>
+			<img class="footer-contact" src="../files/icons/facebook.svg" height="32px" width="32px" onclick="contactFacebook()"/>
+			<img class="footer-contact" src="../files/icons/linkedin.svg" height="32px" width="32px" onclick="contactLinkedin()"/>
+		</div>
+		<div id="footer-disclaimer">Copyright © Tianyi Zhao 2021</div>
+	</div>
+
+</body>
+</html>
