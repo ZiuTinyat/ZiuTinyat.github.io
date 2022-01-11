@@ -198,8 +198,16 @@ a:-webkit-any-link {
 }
 .project-image{
 	margin: auto;
+    vertical-align: middle;
 	margin-top: 10px;
 	width: 93%;
+	height: 250px;
+}
+.project-image img{
+    display: block;
+	margin: auto;
+	max-width: 100%;
+	max-height: 250px;
 }
 .project-content{
 	font-size: 100%;
