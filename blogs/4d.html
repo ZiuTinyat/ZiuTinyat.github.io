@@ -31,10 +31,14 @@
 <h3 class="page-note"> May 7, 2019 </h3>
 <div class="page-content">
 	<p>
-		Meshed slice is added! And more interactions are done. Check the slides below for more details! 
+		I made some simple interactions and setup a scene, for demonstration. 
+		Here is a video: 
 	</p>
+	<div class="video-wrapper">
+		<iframe class="video" src="https://www.youtube.com/embed/AyfK6qc9RTE" frameborder="0" allowfullscreen=""></iframe>
+	</div>
 	<p>
-		Slides here: <a href="https://docs.google.com/presentation/d/1OjkTl9a2xkwbDZ4gRu-p6uCQR6rCUwO1YnHEcnKM-dY/edit#slide=id.g59cbbb8916_1_255">slides</a>
+		Please check out <a href="https://docs.google.com/presentation/d/1OjkTl9a2xkwbDZ4gRu-p6uCQR6rCUwO1YnHEcnKM-dY/edit#slide=id.g59cbbb8916_1_255"> - slides - </a> for more details
 	</p>
 	<p>
 		<img class="page-image" style="width:60%" src="../files/4d/sliced_mesh.gif">
@@ -45,10 +49,20 @@
 <h3 class="page-note"> Apr 23, 2019 </h3>
 <div class="page-content">
 	<p>
-		To be more specified...
+		Here I implemented the frame representing the verteces & edges in sliced projection. 
+		I found it super helpful in understanding 4D object by providing both "whole mesh" (orthogonal projection) and "partial slice" (sliced projection).  
 	</p>
 	<p>
 		<img class="page-image" style="width:60%" src="../files/4d/sliced_edge.gif">
+	</p>
+	<p>
+		The realization of a "slice" requires a lot of calculations. A vertex in a slice corresponds to an edge in 4D, which calculated by the intersection of current 3D "plain" with the 4D line segment. So on, an edge in a slice comes from a polygon in 4D. 
+	</p>
+	<p>
+		This requires the saving format of a 4D object to be complicated, as far as I could figure out. I need to save all 4 levels of dimentional data in order to compute 3D slicing efficiently. Here I use indexing for higher dimentional data.
+	</p>
+	<p>
+		<img class="page-image" style="width:60%" src="../files/4d/file_structure.jpg">
 	</p>
 </div>
 
@@ -163,7 +177,7 @@
 		Foundamentally, a 4D position is in 4 DoF(Degree of Freedom, same as below), and a rotation has 6 DoF. 
 		An effective explanation would be: In 3D, a rotation has 3 DoF aligning with each axis, which could also be considered as every 2 axis (x, y, z)->(yz, zx, xy). 
 		Same can be found in 2D: 1 axis (xy) and in 1D: no rotation. 
-		So, a 4D transform consists of a position (x, y, z, w) and a rotation (yz, zx, xy, xw, yw, zw). 
+		So, a 4D transform consists of a 4 DoF position (x, y, z, w) and a 6 DoF rotation (yz, zx, xy, xw, yw, zw). 
 	</p>
 	<p>
 		Similar to 3D rotation, a rotation matrix in 4D should be 4x4. Here I simply multiply all matrices for all axis in a certain order. 
@@ -210,7 +224,7 @@
 			<a href="https://hollasch.github.io/ray4/Four-Space_Visualization_of_4D_Objects.html"> - 4D visualization - </a>
 	</p>
 	<p>
-		And this is my new <a href="https://hollasch.github.io/ray4/Four-Space_Visualization_of_4D_Objects.html">GitHub repository</a>! 
+		And this is my new <a href="https://github.com/ZiuTinyat/4D-Simulation"> - GitHub repository - </a>! 
 	</p>
 </div>
 
@@ -225,7 +239,7 @@
 			<img class="footer-contact" src="../files/icons/facebook.svg" height="32px" width="32px" onclick="contactFacebook()"/>
 			<img class="footer-contact" src="../files/icons/linkedin.svg" height="32px" width="32px" onclick="contactLinkedin()"/>
 		</div>
-		<div id="footer-disclaimer">Copyright © Tianyi Zhao 2019</div>
+		<div id="footer-disclaimer">Copyright © Tianyi Zhao 2021</div>
 	</div>
 
 </body>
