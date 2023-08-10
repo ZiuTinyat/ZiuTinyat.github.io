@@ -62,7 +62,6 @@ a:-webkit-any-link {
 	margin: auto;
 	margin-top: 300px;
     text-align: center;
-    font-family: 'Alex Brush';
     font-size: 60px;
 }
 .menu{
@@ -313,8 +312,8 @@ a:-webkit-any-link {
 	margin: auto;
 	margin-top: 20px;
 	margin-bottom: 50px;
-	font-size: 18px;
-	font-family: Merriweather;
+	font-size: 20px;
+	font-family: Calibri;
 	font-weight: lighter;
 }
 .page-image{
